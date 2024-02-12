@@ -53,6 +53,11 @@ abstract class Purchasable extends Element implements PurchasableInterface
     private ?array $_sales = null;
 
     /**
+     * @note Added by Robothead
+     */
+    protected $_hasNotLimitedStock;
+
+    /**
      * @inheritdoc
      */
     public function attributes(): array

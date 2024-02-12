@@ -1384,4 +1384,24 @@ class Variant extends Purchasable
             }
         }
     }
+
+    /**
+     * @param float $test
+     * @return void
+     * @note Added by Robothead
+     */
+    public function setHasNotLimitedStock()
+    {
+        $this->_hasNotLimitedStock = true;
+    }
+
+    /**
+     * @param float $test
+     * @return void
+     * @note Added by Robothead
+     */
+    public function getHasNotLimitedStock()
+    {
+        return $this->_hasNotLimitedStock;
+    }
 }
