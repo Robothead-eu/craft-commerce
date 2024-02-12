@@ -50,6 +50,11 @@ abstract class Purchasable extends Element implements PurchasableInterface
     private $_sales;
 
     /**
+     * @note Added by Robothead
+     */
+    protected $_hasNotLimitedStock;
+
+    /**
      * @inheritdoc
      */
     public function attributes()
@@ -313,5 +318,25 @@ abstract class Purchasable extends Element implements PurchasableInterface
                 $this->_salePrice = Plugin::getInstance()->getSales()->getSalePriceForPurchasable($this);
             }
         }
+    }
+
+    /**
+     * @param float $test
+     * @return void
+     * @note Added by Robothead
+     */
+    public function setHasNotLimitedStock()
+    {
+        $this->_hasNotLimitedStock = true;
+    }
+
+    /**
+     * @param float $test
+     * @return void
+     * @note Added by Robothead
+     */
+    public function getHasNotLimitedStock()
+    {
+        return $this->_hasNotLimitedStock;
     }
 }
