@@ -79,7 +79,12 @@ class LineItem extends Model
     /**
      * @var float Sale price is the price of the line item. Sale price is price + saleAmount
      */
-    private float $_salePrice = 0;
+    protected float $_salePrice = 0;
+
+    /**
+     * @var Sale[]|null
+     */
+    protected $_sales;
 
     /**
      * @var float Weight
@@ -384,6 +389,7 @@ class LineItem extends Model
      */
     public function setSalePrice(float|int $salePrice): void
     {
+        $this->_sales = [];
         $this->_salePrice = $salePrice;
     }
 
